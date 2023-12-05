@@ -167,3 +167,4 @@ function Initialize() {
 }
 
 Initialize();
+console.log("message");
