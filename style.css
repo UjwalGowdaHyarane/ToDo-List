@@ -1,0 +1,234 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+html {
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  width: 60vw;
+  height: auto;
+  /* background-color: rgb(216, 213, 213); */
+
+  padding: 30px;
+}
+
+/* App container */
+.app {
+  width: 100%;
+  position: relative;
+  height: auto;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 15px 2px rgb(165, 164, 164);
+}
+
+/* SEARCH BAR STYLE  */
+.input-container {
+  display: flex;
+  margin: 10px;
+  position: relative;
+
+  border-radius: 23px;
+}
+input.TaskBar {
+  background-color: rgb(235, 237, 239);
+  font-size: 26px;
+  height: 80px;
+  border: none;
+  flex: 1;
+  border-radius: 10px;
+  caret-color: grey;
+  padding: 10px;
+  padding-left: 60px;
+  color: rgb(36, 27, 27);
+}
+input.TaskBar::placeholder {
+  color: rgba(180, 176, 176, 0.604);
+}
+.input-container::before {
+  content: " ";
+  background-image: url(SVG/align-right-solid.svg);
+
+  background-repeat: no-repeat;
+  color: black;
+  position: absolute;
+  left: 20px;
+  top: 24px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+/* .input-container:hover::after {
+  content: " ";
+  background-image: url(SVG/circle-plus-solid.svg);
+  font-size: 50px;
+  background-repeat: no-repeat;
+  color: rgb(80, 78, 78);
+  position: absolute;
+  right: 30px;
+  top: 24px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+} */
+
+/* ACTION BUTTONS FOR TOGGLE ALL AND CLEAR ACTIONS */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin: 15px 15px;
+  border-bottom: 1px solid rgba(180, 176, 176, 0.604);
+  padding-bottom: 15px;
+}
+.actions span {
+  letter-spacing: 1px;
+  color: grey;
+  cursor: pointer;
+}
+span:hover {
+  color: black;
+  font-style: bolder;
+}
+
+/* List of tasks in DOM */
+ul {
+  margin: 20px 5px 10px 15px;
+  height: 200px;
+  border-bottom: 1px solid rgba(180, 176, 176, 0.604);
+  overflow: scroll;
+}
+ul::-webkit-scrollbar {
+  display: none;
+}
+
+li {
+  font-family: "Satisfy";
+  display: flex;
+  font-size: 28px;
+  display: flex;
+  padding: 5px 0;
+  list-style: none;
+  margin-bottom: 20px;
+  /* box-shadow: 0px 1px 5px 1px black; */
+
+  /* background-color: rgb(241, 233, 233); */
+
+  align-items: center;
+  gap: 10px;
+}
+
+li:hover .delete {
+  opacity: 1;
+}
+
+/* CHECK BOX  */
+.toggle {
+  margin-left: 15px;
+  margin-right: 20px;
+  width: 20px;
+  height: 30px;
+  cursor: pointer;
+  opacity: ;
+}
+.toggle::before {
+  content: " ";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border: 1px solid black;
+  border-radius: 50%;
+  position: relative;
+  top: 2px;
+  left: -3px;
+}
+.toggle:checked::before {
+  background-color: black;
+  border: 2px solid rgb(115, 111, 111);
+}
+
+.toggle:checked + label {
+  text-decoration: line-through;
+  color: rgb(180, 176, 176);
+}
+
+.fa-circle-plus {
+  border: none;
+  display: inline-block;
+  font-size: 40px;
+  right: 30px;
+  top: 24px;
+  width: 40px;
+  height: 40px;
+}
+
+/* ADD button  */
+button.add {
+  border: none;
+  /* display: inline-block; */
+  position: absolute;
+  font-size: 40px;
+  right: 30px;
+  top: 22px;
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Delete option for each task added */
+.delete {
+  border: none;
+  opacity: 0;
+  margin-left: auto;
+  margin-right: 25px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.1s ease-in-out;
+}
+.check {
+  margin: 0 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Background Image when no tasks are added */
+img {
+  position: absolute;
+  max-width: 70%;
+  height: 300px;
+  top: 26%;
+  left: 17%;
+}
+
+/* common class for hiding items */
+.hidden {
+  display: none;
+}
+a {
+  text-decoration: none;
+  color: grey;
+  cursor: pointer;
+}
+
+/* FILTERS for the added tasks */
+.metrics {
+  border: none;
+}
+.filters {
+  display: flex;
+  gap: 15px;
+}
+.filters span:first-child a {
+  color: black;
+  font-weight: 700;
+}

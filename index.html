@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Inter:wght@400;500;700&family=Rubik:wght@400;500;700&family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/1ee33cb9fb.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>To do list</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="input-container">
+        <input
+          type="text"
+          name="taskinput"
+          class="TaskBar"
+          id="UserInput"
+          placeholder="Type your todo task"
+        />
+
+        <button class="add hidden">
+          <i class="fa-solid fa-circle-plus"></i>
+        </button>
+      </div>
+      <div class="main">
+        <div class="actions">
+          <span id="completeAll">Complete all tasks</span>
+          <span id="clearCompleted">Clear completed</span>
+        </div>
+
+        <div class="task-list-container">
+          <ul class="task-list">
+            <!-- <li>
+              <input type="checkbox" id="1" class="toggle" />
+              <label for="1"
+                >Create task and addjxgyjskugsdjcksugdcsjjsgkdvhskdvjhsdvjh</label
+              >
+              <button class="delete" id='1'><i class="fa-solid fa-trash"></i></button>
+            </li> -->
+          </ul>
+        </div>
+        <div class="actions metrics">
+          <span
+            ><span id="left" style="color: black; font-weight: 600">0</span>
+            tasks left</span
+          >
+          <div class="filters">
+            <span id="all"><a href="#">All</a></span>
+            <span id="uncomplete"><a href="#">Uncomplete</a></span>
+            <span id="completed"><a href="#">Completed</a></span>
+          </div>
+        </div>
+        <img class="bg-img" src="SVG/AdobeStock_591495674.png" alt="bg-image" />
+      </div>
+    </div>
+
+    <script src="demo.js"></script>
+  </body>
+</html>
