@@ -1,5 +1,5 @@
 let tasks = [];
-
+// Initial variables required
 const UserInput = document.getElementById("UserInput");
 const addButton = document.querySelector(".add");
 const tasksList = document.querySelector(".task-list");
